@@ -180,6 +180,6 @@ Open your browser at `http://localhost:8501`
 
 ## 👤 Author
 
-**Kreet**
+**Kreetika**
 European Central Bank — Customer Segmentation & Churn Analytics Project
-2025
+2026
