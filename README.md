@@ -12,7 +12,7 @@
 
 ## 📸 Dashboard Preview
 
-![Dashboard Screenshot](https://raw.githubusercontent.com/Kreetikakishore/european-banking-churn-segmentation-dashboard/main/assets/dashboard.png)
+![Dashboard Screenshot](https://raw.githubusercontent.com/Kreetikakishore/european-banking-churn-segmentation-dashboard/main/assets/dashboard.png?raw=true&v=2)
 
 ---
 
