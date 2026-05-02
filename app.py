@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 
 # ── Page Configuration ────────────────────────
 st.set_page_config(
-    page_title="Customer Segmentation & Churn Pattern Analytics in European Banking",
+    page_title="European Banking Churn Segmentation Dashboard",
     page_icon="🏦",
     layout="wide"
 )
@@ -74,7 +74,7 @@ def churn_rate(series):
     return round(series.mean() * 100, 2)
 
 # ── Title ─────────────────────────────────────
-st.title("🏦 Customer Churn Analytics — European Banking")
+st.title("🏦 European Banking Churn Segmentation Dashboard")
 st.markdown("Segmentation-driven churn analysis across France, Germany and Spain")
 st.markdown("---")
 
