@@ -1,185 +1,225 @@
-# 🏦 Customer Segmentation & Churn Pattern Analytics in European Banking
+# 🏦 European Banking Churn Segmentation Dashboard
 
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red) ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green) ![Plotly](https://img.shields.io/badge/Plotly-Visualizations-orange)
-
-## 📋 Project Overview
-
-This project provides a segmentation-driven analysis of customer churn across three European countries — **France**, **Germany**, and **Spain**. Built for the **European Central Bank**, it uncovers churn patterns across geography, demographics, and financial profiles to help decision-makers design targeted retention strategies.
+> A customer retention intelligence case study designed to identify high-risk churn segments, quantify financial exposure, and generate targeted retention recommendations across a European retail banking portfolio.
 
 ---
 
-## 🎯 Key Findings
+## 📌 Executive Summary
 
-| Metric | Value |
-|---|---|
+Customer churn remains one of the most expensive hidden losses for retail banks, directly impacting deposits, product profitability, and long-term customer lifetime value.
+
+This project analyzes **10,000 European banking customers** across France, Germany, and Spain to uncover:
+
+- where churn risk is geographically concentrated,
+- which customer demographics are most vulnerable,
+- how inactivity and product overload influence exits,
+- and how much customer balance is financially exposed.
+
+Using Python, Pandas, Plotly, and Streamlit, the final outcome is an interactive **churn segmentation dashboard** built to support retention-focused decision making.
+
+---
+
+## 🎯 Business Questions Addressed
+
+This project was developed to answer the following strategic banking questions:
+
+- Which geography shows the highest customer attrition risk?
+- Which age bands are most likely to leave the bank?
+- Are premium high-balance customers churning disproportionately?
+- Does inactive membership strongly correlate with exits?
+- Is product over-selling contributing to churn?
+- Which demographic combinations require urgent retention intervention?
+- How much total customer balance is at risk due to churn?
+
+---
+
+## 📊 Core KPI Snapshot
+
+| KPI Metric | Value |
+|------------|-------|
+| Total Customers Analyzed | 10,000 |
 | Overall Churn Rate | 20.37% |
-| Highest Risk Country | Germany (32.44%) |
-| Highest Risk Age Group | 46–60 years (51.12%) |
+| Highest Risk Geography | Germany |
+| Highest Risk Age Group | 46–60 Years |
 | High Value Customer Churn | 25.23% |
-| Balance at Risk | €159,489,691 |
-| Engagement Gap | 12.58% (Inactive vs Active) |
+| Estimated Balance at Risk | €159.4 Million |
+| Inactive vs Active Churn Gap | 12.58% |
 
 ---
 
-## 📁 Project Structure
+## 🧠 Key Analytical Findings
 
+### 1. Germany Emerges as the Highest Churn Geography
+Germany records the highest attrition rate among all three countries, indicating concentrated retention weakness within this customer market.
+
+### 2. Mid-to-Senior Customers Are Most Vulnerable
+Customers aged **46–60 show the highest churn propensity**, signaling dissatisfaction among financially mature account holders.
+
+### 3. Product Overload Is Linked to Customer Exit
+Customers holding **3 to 4 banking products exhibit extreme churn percentages**, suggesting that aggressive cross-selling may be increasing account fatigue rather than loyalty.
+
+### 4. Inactive Members Show Significantly Higher Churn
+Inactive customers churn at nearly **1.9× the rate of active members**, confirming engagement inactivity as a major warning indicator.
+
+### 5. High Balance Accounts Represent Significant Financial Exposure
+More than **€159 million in deposits are attached to churn-prone customers**, making retention not just a customer issue but a direct balance sheet concern.
+
+---
+
+## 📈 Strategic Retention Recommendations
+
+Based on the observed churn patterns, the following banking actions are recommended:
+
+- **Launch dedicated retention campaigns in Germany**, where attrition concentration is highest.
+- **Introduce re-engagement programs for inactive account holders** before silent churn occurs.
+- **Re-evaluate cross-sell strategies for customers with multiple products** to reduce service fatigue.
+- **Prioritize premium high-balance customer outreach**, as they represent the largest financial exposure.
+- **Design age-personalized loyalty interventions for the 46–60 customer band.**
+
+---
+
+## 🖼️ Dashboard Preview
+
+_Add dashboard screenshots here after creating `screenshots/` folder._
+
+```md
+![Dashboard Overview](screenshots/dashboard_overview.png)
 ```
-bank_churn_project/
+
+---
+
+## 🗂️ Dataset Scope
+
+The analysis was performed on a structured European banking customer dataset containing demographic, financial, and engagement attributes.
+
+| Variable | Description |
+|----------|-------------|
+| CreditScore | Customer creditworthiness |
+| Geography | France / Germany / Spain |
+| Gender | Male / Female |
+| Age | Customer age |
+| Tenure | Years with bank |
+| Balance | Account deposit balance |
+| NumOfProducts | Number of banking products |
+| HasCrCard | Credit card ownership |
+| IsActiveMember | Activity status |
+| EstimatedSalary | Annual salary |
+| Exited | Churn target flag |
+
+---
+
+## 📊 Customer Segmentation Layers
+
+To move beyond simple churn percentage analysis, customers were segmented into strategic risk cohorts:
+
+| Segment | Groups |
+|---------|--------|
+| Age Band | Under 30 / 30–45 / 46–60 / 60+ |
+| Credit Band | Low / Medium / High |
+| Tenure Group | New / Mid / Long-Term |
+| Balance Segment | Zero / Low / High Value |
+
+This segmentation enabled deeper identification of churn-prone profiles rather than generic averages.
+
+---
+
+## 🧰 Technology Stack
+
+| Tool | Role |
+|------|------|
+| Python | Core analytics programming |
+| Pandas | Data cleaning & KPI generation |
+| NumPy | Numerical computations |
+| Plotly | Interactive visual analytics |
+| Matplotlib / Seaborn | Exploratory chart generation |
+| Streamlit | Executive dashboard deployment |
+
+---
+
+## 🖥️ Dashboard Modules
+
+The Streamlit dashboard includes:
+
+- Executive KPI Cards
+- Geography-wise Churn Monitoring
+- Age & Tenure Risk Comparison
+- High Value Customer Exposure
+- Product Saturation Analysis
+- Engagement vs Churn Correlation
+- Churn Heatmaps
+- Raw Customer Data Explorer
+
+---
+
+## 📁 Repository Structure
+
+```bash
+banking-churn-segmentation-dashboard/
+│
 ├── data/
-│   ├── European_Bank.csv             # Original dataset
-│   ├── European_Bank_Cleaned.csv     # Cleaned & segmented dataset
-│   └── KPI_Summary.csv               # All KPIs saved
+│   ├── European_Bank.csv
+│   ├── European_Bank_Cleaned.csv
+│   └── KPI_Summary.csv
+│
 ├── charts/
-│   ├── 01_overall_churn.png
-│   ├── 02_churn_by_geography.png
-│   ├── 03_churn_by_gender.png
-│   ├── 04_churn_by_age.png
-│   ├── 05_churn_by_products.png
-│   ├── 06_churn_by_balance.png
-│   ├── 07_churn_by_active.png
-│   ├── 08_heatmap_geo_age.png
-│   ├── 09_heatmap_geo_gender.png
-│   ├── 10_profile_comparison.png
-│   ├── 11_churn_by_tenure.png
-│   └── 12_churn_by_credit.png
+│   └── static_visualizations/
+│
 ├── notebooks/
-├── analysis.py                       # EDA & KPI calculations
-├── charts.py                         # Static chart generation
-├── app.py                            # Streamlit dashboard
+├── analysis.py
+├── charts.py
+├── app.py
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🗂️ Dataset Description
+## 🚀 How to Run the Dashboard
 
-| Column | Description |
-|---|---|
-| CreditScore | Customer creditworthiness |
-| Geography | France, Spain, Germany |
-| Gender | Male / Female |
-| Age | Customer age |
-| Tenure | Years with the bank |
-| Balance | Account balance |
-| NumOfProducts | Number of bank products |
-| HasCrCard | Credit card ownership (0/1) |
-| IsActiveMember | Activity indicator (0/1) |
-| EstimatedSalary | Estimated annual salary |
-| Exited | Churn indicator — target variable (0/1) |
+### 1. Clone Repository
 
----
-
-## 📊 Customer Segments Created
-
-| Segment | Groups |
-|---|---|
-| Age Group | Under 30, 30–45, 46–60, 60+ |
-| Credit Band | Low, Medium, High |
-| Tenure Group | New (0–2 yrs), Mid (3–6 yrs), Long (7+ yrs) |
-| Balance Segment | Zero Balance, Low Balance, High Balance |
-
----
-
-## 📈 KPIs Tracked
-
-- **Overall Churn Rate** — % of customers who exited
-- **Segment Churn Rate** — Churn % by each segment
-- **High Value Churn Ratio** — Churn among premium customers
-- **Geographic Risk Index** — Regional churn exposure vs average
-- **Engagement Drop Indicator** — Inactivity vs churn correlation
-
----
-
-## 🚀 How to Run
-
-### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/bank-churn-project.git
-cd bank-churn-project
+git clone https://github.com/your-username/banking-churn-segmentation-dashboard.git
+cd banking-churn-segmentation-dashboard
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the analysis
+### 3. Launch Streamlit App
+
 ```bash
-python analysis.py
+python -m streamlit run app.py
 ```
 
-### 4. Generate charts
+### 4. Open Browser
+
 ```bash
-python charts.py
+http://localhost:8501
 ```
 
-### 5. Launch the dashboard
-```bash
-streamlit run app.py
-```
+---
 
-Open your browser at `http://localhost:8501`
+## 📌 Deliverables Produced
+
+- Cleaned and segmented banking dataset
+- KPI summary file
+- Static exploratory visualizations
+- Interactive retention dashboard
+- Strategic churn reduction recommendations
 
 ---
 
-## 🖥️ Dashboard Features
+## ⚠️ Note
 
-| Module | Description |
-|---|---|
-| KPI Summary Cards | Live metric cards updating with filters |
-| Geography-wise Churn | Bar charts and stacked charts by country |
-| Age & Tenure Comparison | Side-by-side churn analysis |
-| High Value Explorer | Premium customer churn with balance at risk |
-| Segment Deep Dive | Gender, products, balance, active membership |
-| Churn Heatmaps | Geography × Age and Geography × Gender |
-| Raw Data Explorer | Filterable table of all 10,000 customers |
-
-### Sidebar Filters
-- Country (France / Germany / Spain)
-- Gender (Male / Female)
-- Age Group (Under 30 / 30–45 / 46–60 / 60+)
-- Balance Segment (Zero / Low / High)
-
----
-
-## 🔍 Key Insights
-
-1. **Germany is the highest risk country** with a 32.44% churn rate — nearly double France and Spain
-2. **Age group 46–60 is critically at risk** with over 51% churn rate
-3. **Customers with 3–4 products churn at 83–100%** suggesting over-selling is a major problem
-4. **Inactive members churn at 1.9× the rate** of active members
-5. **High balance customers churn more** — €159M in balance is at risk
-6. **German women have the highest combined churn** at 37.55%
-
----
-
-## 🛠️ Tech Stack
-
-| Tool | Purpose |
-|---|---|
-| Python 3.11 | Core programming language |
-| Pandas | Data manipulation and analysis |
-| NumPy | Numerical calculations |
-| Matplotlib | Static chart generation |
-| Seaborn | Statistical visualizations |
-| Plotly | Interactive dashboard charts |
-| Streamlit | Web dashboard framework |
-
----
-
-## 📄 Deliverables
-
-- ✅ Cleaned and segmented dataset
-- ✅ 12 static visualizations
-- ✅ KPI summary CSV
-- ✅ Interactive Streamlit dashboard
-- ✅ Research paper with insights and recommendations
+This project was developed as a customer analytics portfolio case study to demonstrate churn intelligence, financial exposure analysis, and retention strategy generation in the retail banking domain.
 
 ---
 
 ## 👤 Author
 
-**Kreetika**
-European Central Bank — Customer Segmentation & Churn Analytics Project
-2026
+**Kreetika Kishore**  
+Data Analytics Portfolio Project | 2026
