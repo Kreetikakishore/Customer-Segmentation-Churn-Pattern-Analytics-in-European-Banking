@@ -56,8 +56,8 @@ selected_bal = st.sidebar.multiselect(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("**European Central Bank**")
-st.sidebar.markdown("Customer Churn Analytics")
+st.sidebar.markdown("**EuroBank Analytics**")
+st.sidebar.markdown("Customer Churn Intelligence")
 
 # ── Apply Filters ─────────────────────────────
 filtered = df[
@@ -382,4 +382,4 @@ display_df = filtered[filtered['Exited'] == 1] if show_churned else filtered
 st.dataframe(display_df.head(500), use_container_width=True)
 
 st.markdown("---")
-st.markdown("**European Central Bank** | Customer Segmentation & Churn Analytics | 2026")
+st.markdown("**European Banking Analytics** | Customer Churn Segmentation | 2026")
