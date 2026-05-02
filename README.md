@@ -81,9 +81,9 @@ Based on the observed churn patterns, the following banking actions are recommen
 ## 🖼️ Dashboard Preview
 
 <img width="1424" height="752" alt="Screenshot 2026-05-02 080825" src="https://github.com/user-attachments/assets/57759c8f-97d8-4fe0-9a75-4f36f1ca162b" />
----
+
 <img width="1379" height="791" alt="Screenshot 2026-05-02 080833" src="https://github.com/user-attachments/assets/c81e9d07-c84d-4cd6-9831-cb24ebd386f2" />
----
+
 <img width="289" height="941" alt="Screenshot 2026-05-02 080945" src="https://github.com/user-attachments/assets/640371de-213a-4b32-b607-5990cdd79b73" />
 
 ---
